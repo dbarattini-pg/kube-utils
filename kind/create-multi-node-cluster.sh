@@ -1,0 +1,1 @@
+kind create cluster --config ./multi-node-cluster-config.yml
