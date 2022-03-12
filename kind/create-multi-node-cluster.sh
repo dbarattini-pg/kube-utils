@@ -13,11 +13,11 @@ do
     esac
 done
 
-kind.exe create cluster --config $config
+kind create cluster --config $config
 
 if [ "$wsl2" = true ] ; then
     echo -e '\nWriting kind kubeconfig to /tmp/kubeconfig... ✍🏻'
-    kind.exe get kubeconfig > /tmp/kubeconfig
+    kind get kubeconfig > /tmp/kubeconfig
     export KUBECONFIG=$KUBECONFIG:/tmp/kubeconfig
 fi
 
